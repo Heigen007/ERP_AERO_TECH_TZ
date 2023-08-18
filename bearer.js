@@ -45,10 +45,6 @@ async function middleware (req, res, next) {
     if (!user) return incorrect_token(res)
     if (new Date() > new Date(user.token_end_time)) return incorrect_token(res, 'authorization token expired')
 
-    const update_result = await update(user.id, user.refresh_token)
-    if (update_result.error) return res.status(400).send(`unknown error`)
-
-    req.headers.authorization = `bearer ${update_result.bearer_token}`
 
     res.contentType('application/json')
 
