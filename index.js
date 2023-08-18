@@ -27,6 +27,7 @@ async function init () {
 
   app.use('/signin', require('./api/signin/signin'))
   app.use('/signup', require('./api/signup/signup'))
+  app.use('/file', require('./api/file/file'))
 }
 
 init ()
