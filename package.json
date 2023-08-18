@@ -1,9 +1,9 @@
 {
-  "name": "tz_work",
+  "name": "erp_aero_tech_tz",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Giranda22-Git/tz_work.git",
-  "author": "Giranda22-Git <61464174+Giranda22-Git@users.noreply.github.com>",
+  "repository": "https://github.com/Heigen007/ERP_AERO_TECH_TZ.git",
+  "author": "Heigen007",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.2",

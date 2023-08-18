@@ -33,8 +33,12 @@ async function query (query) {
   })
 }
 
+function handle_date_for_db (date) {
+  return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+}
 module.exports = {
   connection,
   connect,
-  query
+  query,
+  handle_date_for_db
 }

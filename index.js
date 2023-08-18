@@ -10,10 +10,7 @@ const app = express()
 // base setting up middleware
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use((req, res, next) => {
-	res.contentType('application/json')
-	next()
-})
+app.use(require('./bearer').middleware)
 app.use(cors())
 
 // init application
@@ -28,6 +25,8 @@ async function init () {
   app.use('/signin', require('./api/signin/signin'))
   app.use('/signup', require('./api/signup/signup'))
   app.use('/file', require('./api/file/file'))
+  app.use('/info', require('./api/info/info'))
+  app.use('/logout', require('./api/logout/logout'))
 }
 
 init ()
